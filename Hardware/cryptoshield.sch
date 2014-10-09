@@ -320,48 +320,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;&lt;br&gt;
 &lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="PAD-JUMPER-2-NO_NO_SILK">
-<smd name="1" x="-0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="2" x="0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<text x="-0.908" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-0.908" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
-</package>
-<package name="PAD-JUMPER-2-NO_YES_SILK">
-<description>Small solder jumper with no paste layer so it will open after reflow.</description>
-<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.2032" layer="21"/>
-<wire x1="0.8" y1="1" x2="1" y2="0.7" width="0.2032" layer="21" curve="-90"/>
-<wire x1="-1" y1="0.7" x2="-0.8" y2="1" width="0.2032" layer="21" curve="-90"/>
-<wire x1="-1" y1="-0.7" x2="-0.8" y2="-1" width="0.2032" layer="21" curve="90"/>
-<wire x1="0.8" y1="-1" x2="1" y2="-0.7" width="0.2032" layer="21" curve="90"/>
-<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.2032" layer="21"/>
-<smd name="1" x="-0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="2" x="0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<text x="-0.908" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-0.908" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
-</package>
-<package name="PAD-JUMPER-2-NO_YES_SILK_ROUND">
-<smd name="1" x="-1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
-<smd name="2" x="1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R90" stop="no" thermals="no" cream="no"/>
-<text x="-2.8575" y="2.2225" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.175" y="-3.4925" size="1.27" layer="27">&gt;VALUE</text>
-<polygon width="0" layer="1">
-<vertex x="0.111125" y="-1.42875" curve="85"/>
-<vertex x="1.381125" y="0" curve="85"/>
-<vertex x="0.111125" y="1.42875"/>
-</polygon>
-<polygon width="0" layer="1">
-<vertex x="-0.111125" y="1.42875"/>
-<vertex x="-0.111125" y="-1.42875" curve="-85"/>
-<vertex x="-1.381125" y="0" curve="-85"/>
-</polygon>
-<polygon width="0.2032" layer="29">
-<vertex x="0" y="1.42875" curve="-90"/>
-<vertex x="1.42875" y="0" curve="-90"/>
-<vertex x="0" y="-1.42875" curve="-90"/>
-<vertex x="-1.42875" y="0" curve="-90"/>
-</polygon>
-<circle x="0" y="0" radius="1.74625" width="0.2032" layer="21"/>
-</package>
 <package name="CAP-PTH-SMALL">
 <wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
 <pad name="1" x="0" y="0" drill="0.7" diameter="1.651"/>
@@ -576,18 +534,50 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <circle x="0" y="0" radius="0.40160625" width="0" layer="29"/>
 <circle x="2.54" y="0" radius="0.40160625" width="0" layer="29"/>
 </package>
+<package name="PAD-JUMPER-2-NO_NO_SILK">
+<smd name="1" x="-0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="-0.908" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-0.908" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+<package name="PAD-JUMPER-2-NO_YES_SILK">
+<description>Small solder jumper with no paste layer so it will open after reflow.</description>
+<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.2032" layer="21"/>
+<wire x1="0.8" y1="1" x2="1" y2="0.7" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1" y1="0.7" x2="-0.8" y2="1" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1" y1="-0.7" x2="-0.8" y2="-1" width="0.2032" layer="21" curve="90"/>
+<wire x1="0.8" y1="-1" x2="1" y2="-0.7" width="0.2032" layer="21" curve="90"/>
+<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.2032" layer="21"/>
+<smd name="1" x="-0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="-0.908" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-0.908" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+<package name="PAD-JUMPER-2-NO_YES_SILK_ROUND">
+<smd name="1" x="-1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R90" stop="no" thermals="no" cream="no"/>
+<text x="-2.8575" y="2.2225" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.175" y="-3.4925" size="1.27" layer="27">&gt;VALUE</text>
+<polygon width="0" layer="1">
+<vertex x="0.111125" y="-1.42875" curve="85"/>
+<vertex x="1.381125" y="0" curve="85"/>
+<vertex x="0.111125" y="1.42875"/>
+</polygon>
+<polygon width="0" layer="1">
+<vertex x="-0.111125" y="1.42875"/>
+<vertex x="-0.111125" y="-1.42875" curve="-85"/>
+<vertex x="-1.381125" y="0" curve="-85"/>
+</polygon>
+<polygon width="0.2032" layer="29">
+<vertex x="0" y="1.42875" curve="-90"/>
+<vertex x="1.42875" y="0" curve="-90"/>
+<vertex x="0" y="-1.42875" curve="-90"/>
+<vertex x="-1.42875" y="0" curve="-90"/>
+</polygon>
+<circle x="0" y="0" radius="1.74625" width="0.2032" layer="21"/>
+</package>
 </packages>
 <symbols>
-<symbol name="PAD-JUMPER-2-NO">
-<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-</symbol>
 <symbol name="CAP">
 <wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
 <wire x1="0" y1="0" x2="0" y2="0.508" width="0.1524" layer="94"/>
@@ -598,42 +588,18 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
+<symbol name="PAD-JUMPER-2-NO">
+<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="JUMPER-PAD-2-NO" prefix="SJ">
-<gates>
-<gate name="G$1" symbol="PAD-JUMPER-2-NO" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="PAD-JUMPER-2-NO_NO_SILK">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="YES_SILK" package="PAD-JUMPER-2-NO_YES_SILK">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="ROUND" package="PAD-JUMPER-2-NO_YES_SILK_ROUND">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="CAP" prefix="C" uservalue="yes">
 <description>&lt;b&gt;Capacitor&lt;/b&gt;
 Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
@@ -759,6 +725,40 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </technologies>
 </device>
 <device name="EZ" package="CAP-PTH-SMALLEZ">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JUMPER-PAD-2-NO" prefix="SJ">
+<gates>
+<gate name="G$1" symbol="PAD-JUMPER-2-NO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PAD-JUMPER-2-NO_NO_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="YES_SILK" package="PAD-JUMPER-2-NO_YES_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="ROUND" package="PAD-JUMPER-2-NO_YES_SILK_ROUND">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -5615,13 +5615,11 @@ High-power, low thermal resistance package.</description>
 <part name="R4" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="SJ2" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NO" device="YES_SILK"/>
 <part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="BSS138" value="BSS138"/>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R5" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="SJ3" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NO" device="YES_SILK"/>
 <part name="U$8" library="SparkFun-RF" deviceset="ID-12/20" device="SMD"/>
 <part name="SUPPLY18" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="TAC_SWITCH" device="SMD"/>
@@ -5638,6 +5636,8 @@ High-power, low thermal resistance package.</description>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
+<part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NO" device="YES_SILK" value=""/>
+<part name="SJ2" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NO" device="YES_SILK" value=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5756,7 +5756,6 @@ RTC      0x68
 <instance part="R4" gate="G$1" x="332.74" y="154.94" rot="R270"/>
 <instance part="SUPPLY2" gate="G$1" x="317.5" y="165.1"/>
 <instance part="SUPPLY3" gate="G$1" x="332.74" y="165.1"/>
-<instance part="SJ2" gate="G$1" x="309.88" y="147.32" smashed="yes"/>
 <instance part="Q2" gate="G$1" x="388.62" y="157.48" smashed="yes" rot="R270">
 <attribute name="NAME" x="384.81" y="162.306" size="1.778" layer="95"/>
 <attribute name="VALUE" x="383.286" y="151.892" size="1.778" layer="96"/>
@@ -5765,7 +5764,6 @@ RTC      0x68
 <instance part="R5" gate="G$1" x="396.24" y="165.1" rot="R270"/>
 <instance part="SUPPLY5" gate="G$1" x="381" y="175.26"/>
 <instance part="SUPPLY8" gate="G$1" x="396.24" y="175.26"/>
-<instance part="SJ3" gate="G$1" x="373.38" y="157.48" smashed="yes"/>
 <instance part="U$8" gate="G$1" x="60.96" y="154.94"/>
 <instance part="SUPPLY18" gate="G$1" x="35.56" y="172.72"/>
 <instance part="S1" gate="S" x="35.56" y="20.32"/>
@@ -5784,6 +5782,8 @@ RTC      0x68
 <instance part="GND8" gate="1" x="12.7" y="137.16"/>
 <instance part="GND9" gate="1" x="109.22" y="139.7"/>
 <instance part="JP2" gate="G$1" x="121.92" y="45.72" rot="R180"/>
+<instance part="SJ1" gate="G$1" x="30.48" y="251.46"/>
+<instance part="SJ2" gate="G$1" x="22.86" y="248.92"/>
 </instances>
 <busses>
 </busses>
@@ -6025,9 +6025,13 @@ RTC      0x68
 <label x="403.86" y="48.26" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SJ3" gate="G$1" pin="1"/>
-<wire x1="368.3" y1="157.48" x2="365.76" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="381" y1="157.48" x2="365.76" y2="157.48" width="0.1524" layer="91"/>
 <label x="365.76" y="157.48" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="383.54" y1="157.48" x2="381" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="381" y1="160.02" x2="381" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="Q2" gate="G$1" pin="S"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<junction x="381" y="157.48"/>
 </segment>
 <segment>
 <wire x1="251.46" y1="157.48" x2="264.16" y2="157.48" width="0.1524" layer="91"/>
@@ -6062,9 +6066,13 @@ RTC      0x68
 <label x="403.86" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SJ2" gate="G$1" pin="1"/>
-<wire x1="304.8" y1="147.32" x2="302.26" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="317.5" y1="147.32" x2="302.26" y2="147.32" width="0.1524" layer="91"/>
 <label x="302.26" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="320.04" y1="147.32" x2="317.5" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="317.5" y1="149.86" x2="317.5" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="S"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<junction x="317.5" y="147.32"/>
 </segment>
 <segment>
 <wire x1="251.46" y1="154.94" x2="264.16" y2="154.94" width="0.1524" layer="91"/>
@@ -6293,17 +6301,6 @@ RTC      0x68
 <wire x1="96.52" y1="142.24" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LV1" class="0">
-<segment>
-<wire x1="320.04" y1="147.32" x2="317.5" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="317.5" y1="147.32" x2="314.96" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="317.5" y1="149.86" x2="317.5" y2="147.32" width="0.1524" layer="91"/>
-<junction x="317.5" y="147.32"/>
-<pinref part="Q1" gate="G$1" pin="S"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="SJ2" gate="G$1" pin="2"/>
-</segment>
-</net>
 <net name="5V" class="0">
 <segment>
 <wire x1="332.74" y1="160.02" x2="332.74" y2="165.1" width="0.1524" layer="91"/>
@@ -6337,6 +6334,11 @@ RTC      0x68
 <wire x1="332.74" y1="147.32" x2="340.36" y2="147.32" width="0.1524" layer="91"/>
 <label x="340.36" y="147.32" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="SJ1" gate="G$1" pin="1"/>
+<wire x1="25.4" y1="251.46" x2="15.24" y2="251.46" width="0.1524" layer="91"/>
+<label x="15.24" y="251.46" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="SCL_IN" class="0">
 <segment>
@@ -6353,16 +6355,10 @@ RTC      0x68
 <wire x1="396.24" y1="157.48" x2="403.86" y2="157.48" width="0.1524" layer="91"/>
 <label x="403.86" y="157.48" size="1.27" layer="95" xref="yes"/>
 </segment>
-</net>
-<net name="LV2" class="0">
 <segment>
-<wire x1="383.54" y1="157.48" x2="381" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="381" y1="157.48" x2="378.46" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="381" y1="160.02" x2="381" y2="157.48" width="0.1524" layer="91"/>
-<junction x="381" y="157.48"/>
-<pinref part="Q2" gate="G$1" pin="S"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="SJ3" gate="G$1" pin="2"/>
+<pinref part="SJ2" gate="G$1" pin="1"/>
+<wire x1="17.78" y1="248.92" x2="15.24" y2="248.92" width="0.1524" layer="91"/>
+<label x="15.24" y="248.92" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -6429,6 +6425,20 @@ RTC      0x68
 <pinref part="U$1" gate="G$1" pin="RX"/>
 <wire x1="76.2" y1="261.62" x2="78.74" y2="261.62" width="0.1524" layer="91"/>
 <label x="78.74" y="261.62" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A4"/>
+<pinref part="SJ1" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="251.46" x2="50.8" y2="251.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A5"/>
+<pinref part="SJ2" gate="G$1" pin="2"/>
+<wire x1="27.94" y1="248.92" x2="50.8" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
