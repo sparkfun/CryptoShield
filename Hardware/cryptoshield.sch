@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -221,11 +221,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
 <circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
 </symbol>
-<symbol name="5V">
+<symbol name="VCCIO">
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
 <text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<pin name="VCCIO" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -299,9 +299,10 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="5V" prefix="SUPPLY">
+<deviceset name="VCCIO" prefix="SUPPLY">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
-<gate name="G$1" symbol="5V" x="0" y="0"/>
+<gate name="G$1" symbol="VCCIO" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -5254,19 +5255,16 @@ High-power, low thermal resistance package.</description>
 <part name="R3" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R4" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="BSS138" value="BSS138"/>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R5" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="U$8" library="SparkFun-RF" deviceset="ID-12/20" device="SMD"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="TAC_SWITCH" device="SMD"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
 <part name="SUPPLY19" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY20" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="JP4" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="10UF50V20%(1210)" device="" value="10uF"/>
 <part name="C10" library="SparkFun-Capacitors" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uF"/>
@@ -5275,10 +5273,13 @@ High-power, low thermal resistance package.</description>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NO" device="YES_SILK" value=""/>
 <part name="SJ2" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NO" device="YES_SILK" value=""/>
-<part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="SUPPLY11" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="SUPPLY18" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="SUPPLY22" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY11" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="SUPPLY18" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5291,7 +5292,7 @@ High-power, low thermal resistance package.</description>
 <wire x1="0" y1="60.96" x2="142.24" y2="60.96" width="0.1524" layer="94"/>
 <wire x1="142.24" y1="60.96" x2="142.24" y2="116.84" width="0.1524" layer="94"/>
 <wire x1="142.24" y1="60.96" x2="142.24" y2="0" width="0.1524" layer="94"/>
-<text x="332.74" y="116.84" size="2.54" layer="94" font="vector">I2C Level Conversion</text>
+<text x="337.82" y="132.08" size="2.54" layer="94" font="vector">I2C Level Conversion</text>
 <text x="38.1" y="5.08" size="2.54" layer="94" font="vector">Real Time Clock (w/ Battery)</text>
 <text x="226.06" y="200.66" size="2.54" layer="94" font="vector">Atmel Trusted Platform Module (TPM)</text>
 <wire x1="142.24" y1="187.96" x2="231.14" y2="187.96" width="0.1524" layer="94"/>
@@ -5306,9 +5307,6 @@ High-power, low thermal resistance package.</description>
 <text x="276.86" y="5.08" size="2.54" layer="94" font="vector">AVR ISCP</text>
 <wire x1="330.2" y1="60.96" x2="431.8" y2="60.96" width="0.1524" layer="94"/>
 <wire x1="431.8" y1="60.96" x2="431.8" y2="58.42" width="0.1524" layer="94"/>
-<text x="302.26" y="93.98" size="2.54" layer="94" font="vector">To enable 5V logic:
-1. Move solder blob to other position on 3-way jumper.
-2. Place new solder blob on second jumper.</text>
 <wire x1="142.24" y1="116.84" x2="231.14" y2="116.84" width="0.1524" layer="94"/>
 <wire x1="231.14" y1="116.84" x2="231.14" y2="60.96" width="0.1524" layer="94"/>
 <text x="165.1" y="63.5" size="2.54" layer="94" font="vector">SHA-256 (ATSHA204)</text>
@@ -5325,10 +5323,14 @@ RTC      0x68
 (7 bit addresses)</text>
 <text x="365.76" y="36.068" size="2.54" layer="94" font="vector">AES-128 (ATAES132)</text>
 <text x="350.52" y="10.16" size="2.54" layer="94">Josh Datko / Casey Kuhns</text>
-<text x="421.64" y="7.62" size="2.54" layer="94">v01</text>
+<text x="421.64" y="7.62" size="2.54" layer="94">v02</text>
 <wire x1="0" y1="187.96" x2="142.24" y2="187.96" width="0.1524" layer="94"/>
 <text x="48.26" y="200.66" size="2.54" layer="94" font="vector">Shield Headers</text>
 <wire x1="231.14" y1="187.96" x2="231.14" y2="116.84" width="0.1524" layer="94"/>
+<wire x1="287.02" y1="116.84" x2="431.8" y2="116.84" width="0.1524" layer="94"/>
+<text x="309.88" y="78.74" size="2.54" layer="94" font="vector">Revision History:
+v01: Initial
+v02: Changed 5V to IOREF</text>
 </plain>
 <instances>
 <instance part="GND1" gate="1" x="93.98" y="20.32"/>
@@ -5395,7 +5397,6 @@ RTC      0x68
 <instance part="R3" gate="G$1" x="317.5" y="154.94" rot="R270"/>
 <instance part="R4" gate="G$1" x="332.74" y="154.94" rot="R270"/>
 <instance part="SUPPLY2" gate="G$1" x="317.5" y="165.1"/>
-<instance part="SUPPLY3" gate="G$1" x="332.74" y="165.1"/>
 <instance part="Q2" gate="G$1" x="388.62" y="157.48" smashed="yes" rot="R270">
 <attribute name="NAME" x="384.81" y="162.306" size="1.778" layer="95"/>
 <attribute name="VALUE" x="383.286" y="151.892" size="1.778" layer="96"/>
@@ -5403,7 +5404,6 @@ RTC      0x68
 <instance part="R1" gate="G$1" x="381" y="165.1" rot="R270"/>
 <instance part="R5" gate="G$1" x="396.24" y="165.1" rot="R270"/>
 <instance part="SUPPLY5" gate="G$1" x="381" y="175.26"/>
-<instance part="SUPPLY8" gate="G$1" x="396.24" y="175.26"/>
 <instance part="U$8" gate="G$1" x="60.96" y="154.94"/>
 <instance part="S1" gate="S" x="35.56" y="20.32"/>
 <instance part="GND6" gate="1" x="25.4" y="10.16"/>
@@ -5412,7 +5412,6 @@ RTC      0x68
 </instance>
 <instance part="SUPPLY19" gate="G$1" x="264.16" y="172.72"/>
 <instance part="GND7" gate="1" x="274.32" y="142.24"/>
-<instance part="SUPPLY20" gate="G$1" x="38.1" y="269.24"/>
 <instance part="JP4" gate="G$1" x="246.38" y="160.02"/>
 <instance part="C1" gate="G$1" x="12.7" y="154.94"/>
 <instance part="C10" gate="G$1" x="109.22" y="152.4"/>
@@ -5421,9 +5420,12 @@ RTC      0x68
 <instance part="JP2" gate="G$1" x="121.92" y="45.72" rot="R180"/>
 <instance part="SJ1" gate="G$1" x="30.48" y="251.46"/>
 <instance part="SJ2" gate="G$1" x="22.86" y="248.92"/>
-<instance part="SUPPLY1" gate="G$1" x="35.56" y="172.72"/>
-<instance part="SUPPLY4" gate="G$1" x="78.74" y="172.72"/>
-<instance part="SUPPLY11" gate="G$1" x="12.7" y="172.72"/>
+<instance part="SUPPLY22" gate="G$1" x="38.1" y="271.78"/>
+<instance part="SUPPLY3" gate="G$1" x="332.74" y="165.1"/>
+<instance part="SUPPLY8" gate="G$1" x="396.24" y="175.26"/>
+<instance part="SUPPLY1" gate="G$1" x="12.7" y="172.72"/>
+<instance part="SUPPLY4" gate="G$1" x="35.56" y="172.72"/>
+<instance part="SUPPLY11" gate="G$1" x="78.74" y="172.72"/>
 <instance part="SUPPLY18" gate="G$1" x="109.22" y="170.18"/>
 </instances>
 <busses>
@@ -5920,46 +5922,6 @@ RTC      0x68
 <wire x1="96.52" y1="142.24" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="5V" class="0">
-<segment>
-<wire x1="332.74" y1="160.02" x2="332.74" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="SUPPLY3" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<wire x1="396.24" y1="170.18" x2="396.24" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="SUPPLY8" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="5V"/>
-<pinref part="SUPPLY20" gate="G$1" pin="5V"/>
-<wire x1="50.8" y1="233.68" x2="38.1" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="233.68" x2="38.1" y2="269.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$8" gate="G$1" pin="RES"/>
-<wire x1="45.72" y1="154.94" x2="35.56" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="154.94" x2="35.56" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="SUPPLY1" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<wire x1="78.74" y1="172.72" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="U$8" gate="G$1" pin="5V"/>
-<wire x1="76.2" y1="162.56" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="SUPPLY4" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="12.7" y1="160.02" x2="12.7" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="SUPPLY11" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="157.48" x2="109.22" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="SUPPLY18" gate="G$1" pin="5V"/>
-</segment>
-</net>
 <net name="SDA_IN" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="SDA"/>
@@ -6080,6 +6042,46 @@ RTC      0x68
 <pinref part="U$1" gate="G$1" pin="A5"/>
 <pinref part="SJ2" gate="G$1" pin="2"/>
 <wire x1="27.94" y1="248.92" x2="50.8" y2="248.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCCIO" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="IOREF"/>
+<wire x1="50.8" y1="241.3" x2="38.1" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="241.3" x2="38.1" y2="271.78" width="0.1524" layer="91"/>
+<pinref part="SUPPLY22" gate="G$1" pin="VCCIO"/>
+</segment>
+<segment>
+<wire x1="332.74" y1="160.02" x2="332.74" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="SUPPLY3" gate="G$1" pin="VCCIO"/>
+</segment>
+<segment>
+<wire x1="396.24" y1="170.18" x2="396.24" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="SUPPLY8" gate="G$1" pin="VCCIO"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="RES"/>
+<wire x1="45.72" y1="154.94" x2="35.56" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="154.94" x2="35.56" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="SUPPLY4" gate="G$1" pin="VCCIO"/>
+</segment>
+<segment>
+<wire x1="78.74" y1="172.72" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="U$8" gate="G$1" pin="5V"/>
+<wire x1="76.2" y1="162.56" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="SUPPLY11" gate="G$1" pin="VCCIO"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="12.7" y1="160.02" x2="12.7" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="G$1" pin="VCCIO"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="157.48" x2="109.22" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="SUPPLY18" gate="G$1" pin="VCCIO"/>
 </segment>
 </net>
 </nets>
