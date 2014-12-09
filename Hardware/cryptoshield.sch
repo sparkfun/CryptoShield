@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5057,6 +5057,47 @@ High-power, low thermal resistance package.</description>
 <text x="-1.27" y="-3.556" size="0.8128" layer="93">S</text>
 <text x="-5.08" y="-1.27" size="0.8128" layer="93">G</text>
 </symbol>
+<symbol name="MOSFET-PCHANNEL">
+<wire x1="-3.6576" y1="2.413" x2="-3.6576" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="1.905" x2="-2.0066" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.905" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="-1.905" x2="0" y2="-1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.905" x2="2.54" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-1.905" x2="0" y2="-1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.905" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-1.905" x2="2.54" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.762" x2="2.54" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.762" x2="3.175" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="0.635" x2="1.905" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="0.635" x2="2.54" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="-0.762" x2="2.54" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.762" x2="1.905" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="-0.762" x2="1.651" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="-0.762" x2="3.429" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0.508" x2="-1.27" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="-0.508" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-2.032" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="-0.254" x2="-0.254" y2="0" width="0.3048" layer="94"/>
+<wire x1="-0.254" y1="0" x2="-1.143" y2="0.254" width="0.3048" layer="94"/>
+<wire x1="-1.143" y1="0.254" x2="-1.143" y2="0" width="0.3048" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-0.889" y2="0" width="0.3048" layer="94"/>
+<wire x1="-3.81" y1="0" x2="-5.08" y2="0" width="0.1524" layer="94"/>
+<circle x="0" y="-1.905" radius="0.127" width="0.4064" layer="94"/>
+<circle x="0" y="1.905" radius="0.127" width="0.4064" layer="94"/>
+<text x="5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-1.27" y="2.54" size="0.8128" layer="93">D</text>
+<text x="-1.27" y="-3.556" size="0.8128" layer="93">S</text>
+<text x="-5.08" y="-1.27" size="0.8128" layer="93">G</text>
+<rectangle x1="-2.794" y1="-2.54" x2="-2.032" y2="-1.27" layer="94"/>
+<rectangle x1="-2.794" y1="1.27" x2="-2.032" y2="2.54" layer="94"/>
+<rectangle x1="-2.794" y1="-0.889" x2="-2.032" y2="0.889" layer="94"/>
+<pin name="G" x="-7.62" y="0" visible="off" length="short" direction="pas"/>
+<pin name="D" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="S" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="MOSFET-NCHANNEL" prefix="Q">
@@ -5183,6 +5224,85 @@ High-power, low thermal resistance package.</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="MOSFET-PCHANNEL" prefix="Q">
+<description>Generic PMOSFET
+
+&lt;ul&gt;
+&lt;li&gt;
+IRLML2244 - TRANS-11153 
+(SOT-23 -20V -4.3A) 
+(1.Gate 2.Source 3.Drain)
+&lt;/li&gt;
+&lt;li&gt;
+FQP27P06 - 
+&lt;a href="http://www.sparkfun.com/products/10349"&gt;COM-10349&lt;/a&gt;
+(TO-220 -60V -27A)
+(1.Gate 2.Source 3.Drain)
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+<gates>
+<gate name="G$1" symbol="MOSFET-PCHANNEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SMD" package="SOT23-3">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="IRLML2244" package="SOT23-3">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="TRANS-11153"/>
+</technology>
+</technologies>
+</device>
+<device name="" package="SOT23-3">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="TRANS-08285" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="FQP27P06" package="TO220V">
+<connects>
+<connect gate="G$1" pin="D" pad="2"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="DMG2307L" package="SOT23-3">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="TRANS-11308"/>
+<attribute name="VALUE" value="30V, 2.5A"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -5280,6 +5400,12 @@ High-power, low thermal resistance package.</description>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 <part name="SUPPLY11" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 <part name="SUPPLY18" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="Q3" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="BSS138" value="BSS138"/>
+<part name="R7" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="Q4" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="" value="MOSFET-PCH"/>
+<part name="SUPPLY20" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="R8" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 </parts>
 <sheets>
 <sheet>
@@ -5294,7 +5420,7 @@ High-power, low thermal resistance package.</description>
 <wire x1="142.24" y1="60.96" x2="142.24" y2="0" width="0.1524" layer="94"/>
 <text x="337.82" y="132.08" size="2.54" layer="94" font="vector">I2C Level Conversion</text>
 <text x="38.1" y="5.08" size="2.54" layer="94" font="vector">Real Time Clock (w/ Battery)</text>
-<text x="226.06" y="200.66" size="2.54" layer="94" font="vector">Atmel Trusted Platform Module (TPM)</text>
+<text x="213.36" y="200.66" size="2.54" layer="94" font="vector">Atmel Trusted Platform Module (TPM)</text>
 <wire x1="142.24" y1="187.96" x2="231.14" y2="187.96" width="0.1524" layer="94"/>
 <wire x1="231.14" y1="187.96" x2="287.02" y2="187.96" width="0.1524" layer="94"/>
 <wire x1="287.02" y1="187.96" x2="431.8" y2="187.96" width="0.1524" layer="94"/>
@@ -5339,13 +5465,13 @@ v02: Changed 5V to IOREF</text>
 <instance part="GND2" gate="1" x="73.66" y="25.4"/>
 <instance part="GND5" gate="1" x="149.86" y="15.24"/>
 <instance part="GND3" gate="1" x="233.68" y="213.36"/>
-<instance part="GND4" gate="1" x="279.4" y="213.36"/>
+<instance part="GND4" gate="1" x="279.4" y="210.82"/>
 <instance part="C2" gate="G$1" x="215.9" y="243.84"/>
 <instance part="C7" gate="G$1" x="226.06" y="243.84"/>
 <instance part="C8" gate="G$1" x="226.06" y="226.06"/>
 <instance part="C11" gate="G$1" x="215.9" y="226.06"/>
-<instance part="C12" gate="G$1" x="292.1" y="246.38"/>
-<instance part="C13" gate="G$1" x="289.56" y="228.6"/>
+<instance part="C12" gate="G$1" x="292.1" y="248.92"/>
+<instance part="C13" gate="G$1" x="284.48" y="226.06"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="330.2" y="0"/>
 <instance part="TPM1" gate="G$1" x="271.78" y="233.68"/>
@@ -5381,7 +5507,7 @@ v02: Changed 5V to IOREF</text>
 <instance part="SUPPLY24" gate="G$1" x="421.64" y="53.34"/>
 <instance part="U1" gate="G$1" x="340.36" y="238.76" rot="MR0"/>
 <instance part="SUPPLY17" gate="G$1" x="358.14" y="246.38"/>
-<instance part="GND18" gate="1" x="325.12" y="213.36"/>
+<instance part="GND18" gate="1" x="325.12" y="231.14"/>
 <instance part="C5" gate="G$1" x="358.14" y="236.22"/>
 <instance part="GND19" gate="1" x="358.14" y="228.6"/>
 <instance part="R2" gate="G$1" x="96.52" y="149.86" rot="R90"/>
@@ -5427,6 +5553,18 @@ v02: Changed 5V to IOREF</text>
 <instance part="SUPPLY4" gate="G$1" x="35.56" y="172.72"/>
 <instance part="SUPPLY11" gate="G$1" x="78.74" y="172.72"/>
 <instance part="SUPPLY18" gate="G$1" x="109.22" y="170.18"/>
+<instance part="Q3" gate="G$1" x="304.8" y="210.82" smashed="yes" rot="MR0">
+<attribute name="NAME" x="309.626" y="207.01" size="1.778" layer="95" rot="MR90"/>
+<attribute name="VALUE" x="299.212" y="205.486" size="1.778" layer="96" rot="MR90"/>
+</instance>
+<instance part="R7" gate="G$1" x="304.8" y="226.06" rot="R270"/>
+<instance part="GND10" gate="1" x="304.8" y="200.66"/>
+<instance part="Q4" gate="G$1" x="314.96" y="218.44" smashed="yes" rot="R180">
+<attribute name="NAME" x="309.88" y="215.9" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="317.5" y="213.36" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY20" gate="G$1" x="314.96" y="233.68"/>
+<instance part="R8" gate="G$1" x="330.2" y="218.44"/>
 </instances>
 <busses>
 </busses>
@@ -5496,15 +5634,16 @@ v02: Changed 5V to IOREF</text>
 <wire x1="279.4" y1="236.22" x2="279.4" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="279.4" y1="231.14" x2="279.4" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="279.4" y1="226.06" x2="279.4" y2="220.98" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="220.98" x2="279.4" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="218.44" x2="279.4" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="220.98" x2="279.4" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="215.9" x2="279.4" y2="213.36" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="292.1" y1="246.38" x2="292.1" y2="243.84" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="243.84" x2="279.4" y2="243.84" width="0.1524" layer="91"/>
 <junction x="279.4" y="243.84"/>
 <pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="289.56" y1="226.06" x2="289.56" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="289.56" y1="218.44" x2="279.4" y2="218.44" width="0.1524" layer="91"/>
-<junction x="279.4" y="218.44"/>
+<wire x1="284.48" y1="223.52" x2="284.48" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="215.9" x2="279.4" y2="215.9" width="0.1524" layer="91"/>
+<junction x="279.4" y="215.9"/>
 <pinref part="TPM1" gate="G$1" pin="ATEST6"/>
 <wire x1="271.78" y1="261.62" x2="279.4" y2="261.62" width="0.1524" layer="91"/>
 <pinref part="TPM1" gate="G$1" pin="GND3"/>
@@ -5567,7 +5706,7 @@ v02: Changed 5V to IOREF</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="327.66" y1="236.22" x2="325.12" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="325.12" y1="236.22" x2="325.12" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="236.22" x2="325.12" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -5625,6 +5764,11 @@ v02: Changed 5V to IOREF</text>
 <pinref part="C10" gate="G$1" pin="2"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="109.22" y1="149.86" x2="109.22" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Q3" gate="G$1" pin="S"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="304.8" y1="203.2" x2="304.8" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
@@ -5781,13 +5925,15 @@ v02: Changed 5V to IOREF</text>
 <pinref part="C12" gate="G$1" pin="1"/>
 <wire x1="292.1" y1="269.24" x2="292.1" y2="266.7" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="266.7" x2="292.1" y2="264.16" width="0.1524" layer="91"/>
-<wire x1="292.1" y1="264.16" x2="292.1" y2="254" width="0.1524" layer="91"/>
-<wire x1="292.1" y1="254" x2="292.1" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="264.16" x2="292.1" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="256.54" x2="292.1" y2="254" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="254" x2="284.48" y2="254" width="0.1524" layer="91"/>
-<junction x="292.1" y="254"/>
+<junction x="292.1" y="256.54"/>
 <pinref part="TPM1" gate="G$1" pin="VCC3"/>
 <pinref part="TPM1" gate="G$1" pin="ATEST8"/>
-<wire x1="284.48" y1="254" x2="292.1" y2="254" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="254" x2="289.56" y2="254" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="254" x2="289.56" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="256.54" x2="292.1" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="266.7" x2="292.1" y2="266.7" width="0.1524" layer="91"/>
 <junction x="292.1" y="266.7"/>
 <pinref part="R6" gate="G$1" pin="2"/>
@@ -5802,15 +5948,15 @@ v02: Changed 5V to IOREF</text>
 <segment>
 <wire x1="304.8" y1="236.22" x2="304.8" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="289.56" y1="233.68" x2="271.78" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="233.68" x2="289.56" y2="233.68" width="0.1524" layer="91"/>
-<junction x="289.56" y="233.68"/>
+<wire x1="284.48" y1="233.68" x2="271.78" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="233.68" x2="284.48" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="233.68" x2="284.48" y2="231.14" width="0.1524" layer="91"/>
 <pinref part="TPM1" gate="G$1" pin="VCC2"/>
 <pinref part="SUPPLY10" gate="G$1" pin="3.3V"/>
-<pinref part="TPM1" gate="G$1" pin="RST"/>
-<wire x1="271.78" y1="223.52" x2="304.8" y2="223.52" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="223.52" x2="304.8" y2="233.68" width="0.1524" layer="91"/>
 <junction x="304.8" y="233.68"/>
+<junction x="284.48" y="233.68"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="304.8" y1="231.14" x2="304.8" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
@@ -6082,6 +6228,51 @@ v02: Changed 5V to IOREF</text>
 <pinref part="C10" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="157.48" x2="109.22" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="SUPPLY18" gate="G$1" pin="VCCIO"/>
+</segment>
+<segment>
+<pinref part="Q4" gate="G$1" pin="S"/>
+<pinref part="SUPPLY20" gate="G$1" pin="VCCIO"/>
+<wire x1="314.96" y1="233.68" x2="314.96" y2="223.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="304.8" y1="218.44" x2="304.8" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="218.44" x2="304.8" y2="218.44" width="0.1524" layer="91"/>
+<pinref part="TPM1" gate="G$1" pin="RST"/>
+<wire x1="271.78" y1="223.52" x2="281.94" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="223.52" x2="281.94" y2="218.44" width="0.1524" layer="91"/>
+<pinref part="Q3" gate="G$1" pin="D"/>
+<wire x1="304.8" y1="218.44" x2="304.8" y2="215.9" width="0.1524" layer="91"/>
+<junction x="304.8" y="218.44"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="Q3" gate="G$1" pin="G"/>
+<pinref part="Q4" gate="G$1" pin="D"/>
+<wire x1="312.42" y1="210.82" x2="314.96" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="210.82" x2="314.96" y2="213.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="Q4" gate="G$1" pin="G"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="325.12" y1="218.44" x2="322.58" y2="218.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="!RESET" class="0">
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="335.28" y1="218.44" x2="337.82" y2="218.44" width="0.1524" layer="91"/>
+<label x="337.82" y="218.44" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="RES"/>
+<wire x1="50.8" y1="238.76" x2="43.18" y2="238.76" width="0.1524" layer="91"/>
+<label x="43.18" y="238.76" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
