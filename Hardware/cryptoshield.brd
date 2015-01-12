@@ -236,16 +236,16 @@
 <text x="8.89" y="33.02" size="0.8128" layer="21" font="vector" ratio="15" rot="R90" align="center-right">3.3V</text>
 <text x="22.606" y="6.096" size="0.8128" layer="22" ratio="15" rot="SMR270" align="center">I2C 
 A4 A5</text>
-<text x="46.228" y="18.288" size="0.8128" layer="21" ratio="15" rot="R90" align="center">TPM</text>
+<text x="46.228" y="18.288" size="0.8128" layer="21" font="vector" ratio="15" rot="R90" align="center">TPM</text>
 <wire x1="39.8018" y1="21.082" x2="39.8018" y2="21.1328" width="0.127" layer="41"/>
 <wire x1="43.1038" y1="21.082" x2="43.1038" y2="21.1328" width="0.127" layer="41"/>
 <wire x1="43.1038" y1="15.2654" x2="43.1038" y2="15.1892" width="0.127" layer="41"/>
 <wire x1="37.8206" y1="15.2146" x2="37.8206" y2="15.2654" width="0.127" layer="41"/>
-<text x="2.032" y="18.923" size="0.8128" layer="21" ratio="15" rot="R180" align="bottom-center">STAT</text>
-<text x="20.32" y="19.05" size="1.27" layer="21" ratio="15" align="bottom-center">RFID ID-12</text>
-<text x="36.83" y="34.036" size="0.8128" layer="21" ratio="15" align="bottom-center">PP</text>
-<text x="36.83" y="36.322" size="0.8128" layer="21" ratio="15" align="bottom-center">SQW</text>
-<text x="36.068" y="39.37" size="0.8128" layer="21" ratio="15" rot="R270" align="bottom-center">32kHz</text>
+<text x="2.032" y="18.923" size="0.8128" layer="21" font="vector" ratio="15" rot="R180" align="bottom-center">STAT</text>
+<text x="20.32" y="19.05" size="1.27" layer="21" font="vector" ratio="15" align="bottom-center">RFID ID-12</text>
+<text x="36.83" y="34.036" size="0.8128" layer="21" font="vector" ratio="15" align="bottom-center">PP</text>
+<text x="36.83" y="36.322" size="0.8128" layer="21" font="vector" ratio="15" align="bottom-center">SQW</text>
+<text x="36.068" y="39.37" size="0.8128" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">32kHz</text>
 </plain>
 <libraries>
 <library name="SparkFun-Passives">
