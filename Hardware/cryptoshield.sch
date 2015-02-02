@@ -21505,7 +21505,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U3" library="SparkFun-RF" deviceset="ID-12/20" device="SMD"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="SUPPLY19" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK_FEMALE_PTH"/>
 <part name="C13" library="SparkFun-Capacitors" deviceset="10UF50V20%(1210)" device="" value="10uF"/>
@@ -21530,11 +21529,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="">
 <attribute name="DESIGNER" value="Josh Datko / Casey Kuhns"/>
-<attribute name="VERSION" value="v02"/>
+<attribute name="VERSION" value="v10"/>
 </part>
 <part name="S2" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD" value="Reset"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="LOGO3" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
+<part name="SUPPLY19" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21656,8 +21656,7 @@ Arduinos</text>
 <instance part="JP1" gate="G$1" x="93.98" y="165.1" smashed="yes" rot="R180">
 <attribute name="NAME" x="96.52" y="161.798" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="SUPPLY19" gate="G$1" x="170.18" y="106.68"/>
-<instance part="GND7" gate="1" x="170.18" y="86.36"/>
+<instance part="GND7" gate="1" x="177.8" y="86.36"/>
 <instance part="JP3" gate="G$1" x="162.56" y="96.52"/>
 <instance part="C13" gate="G$1" x="114.3" y="162.56" rot="MR0"/>
 <instance part="C12" gate="G$1" x="187.96" y="154.94" rot="MR0"/>
@@ -21693,6 +21692,7 @@ Arduinos</text>
 <instance part="S2" gate="G$1" x="20.32" y="162.56"/>
 <instance part="LOGO2" gate="G$1" x="106.68" y="27.94"/>
 <instance part="LOGO3" gate="G$1" x="91.44" y="2.54"/>
+<instance part="SUPPLY19" gate="G$1" x="172.72" y="106.68"/>
 </instances>
 <busses>
 </busses>
@@ -21876,12 +21876,6 @@ Arduinos</text>
 <pinref part="S2" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="167.64" y1="101.6" x2="170.18" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="101.6" x2="170.18" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="G$1" pin="5"/>
-</segment>
-<segment>
 <pinref part="C13" gate="G$1" pin="2"/>
 <pinref part="GND8" gate="1" pin="GND"/>
 <wire x1="114.3" y1="160.02" x2="114.3" y2="154.94" width="0.1524" layer="91"/>
@@ -21901,6 +21895,12 @@ Arduinos</text>
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="116.84" y1="86.36" x2="119.38" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="86.36" x2="119.38" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP3" gate="G$1" pin="6"/>
+<wire x1="167.64" y1="104.14" x2="177.8" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="104.14" x2="177.8" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
@@ -21953,9 +21953,9 @@ Arduinos</text>
 <junction x="213.36" y="157.48"/>
 </segment>
 <segment>
-<wire x1="167.64" y1="93.98" x2="172.72" y2="93.98" width="0.1524" layer="91"/>
-<label x="172.72" y="93.98" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP3" gate="G$1" pin="2"/>
+<pinref part="JP3" gate="G$1" pin="3"/>
+<wire x1="167.64" y1="96.52" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
+<label x="170.18" y="96.52" size="1.27" layer="95" ratio="15" xref="yes"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -21994,9 +21994,9 @@ Arduinos</text>
 <junction x="213.36" y="127"/>
 </segment>
 <segment>
-<wire x1="167.64" y1="91.44" x2="172.72" y2="91.44" width="0.1524" layer="91"/>
-<label x="172.72" y="91.44" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="JP3" gate="G$1" pin="4"/>
+<wire x1="167.64" y1="99.06" x2="170.18" y2="99.06" width="0.1524" layer="91"/>
+<label x="170.18" y="99.06" size="1.27" layer="95" ratio="15" xref="yes"/>
 </segment>
 </net>
 <net name="TPM_CLK" class="0">
@@ -22161,10 +22161,10 @@ Arduinos</text>
 <pinref part="SUPPLY5" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
-<wire x1="167.64" y1="104.14" x2="170.18" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="5"/>
+<wire x1="167.64" y1="101.6" x2="172.72" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="101.6" x2="172.72" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="SUPPLY19" gate="G$1" pin="3.3V"/>
-<wire x1="170.18" y1="106.68" x2="170.18" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="32KHZ" class="0">
@@ -22255,9 +22255,9 @@ Arduinos</text>
 <label x="127" y="162.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="3"/>
-<wire x1="167.64" y1="96.52" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
-<label x="172.72" y="96.52" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="167.64" y1="93.98" x2="170.18" y2="93.98" width="0.1524" layer="91"/>
+<label x="170.18" y="93.98" size="1.27" layer="95" ratio="15" xref="yes"/>
 </segment>
 </net>
 <net name="ANT2" class="0">
@@ -22267,9 +22267,9 @@ Arduinos</text>
 <label x="127" y="160.02" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="4"/>
-<wire x1="167.64" y1="99.06" x2="172.72" y2="99.06" width="0.1524" layer="91"/>
-<label x="172.72" y="99.06" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="167.64" y1="91.44" x2="170.18" y2="91.44" width="0.1524" layer="91"/>
+<label x="170.18" y="91.44" size="1.27" layer="95" ratio="15" xref="yes"/>
 </segment>
 </net>
 <net name="PP" class="0">
